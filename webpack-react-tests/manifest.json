@@ -3,7 +3,10 @@
   "id": "webpack-react-sample",
   "api": "1.0.0",
   "main": "dist/code.js",
-  "ui": "dist/ui.html",
+  "ui": {
+    "main": "dist/ui.html",
+    "tests": "node_modules/@cva/test-reporter-html/dist/index.html"
+  },
   "editorType": ["figma", "figjam"],
   "networkAccess": {
     "allowedDomains": ["none"]

@@ -2,10 +2,36 @@
   "compilerOptions": {
     "target": "es6",
     "jsx": "react",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./node_modules/@figma"
+     "lib": [
+
+     ],
+    "types": [
+      "bun-types",
+      //   //   "svelte",
+      //   //   "@types/jest",
+      //   //   "@jest/globals",
+      "@figma/plugin-typings"
+    ],
+    // "typeRoots": [
+    //   "./node_modules/@types",
+    //   "./node_modules/@figma",
+    //   // "./node_modules/@cva/run-figma-run/dist"
+    // ]
+  },
+  "paths": {
+    "@cva/run-figma-run": [
+      "../../../packages/run-figma-run/src",
+    ],
+    "@cva/run-figma-run/*": [
+      "../../../packages/run-figma-run/src/*",
     ]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "node_modules/@figma/plugin-typings/index.d.ts"
+  ],
+  "exclude": [
+    "dist"
+  ],
 }
